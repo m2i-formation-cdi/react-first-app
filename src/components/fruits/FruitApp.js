@@ -24,13 +24,14 @@ class FruitApp extends React.Component {
    addFruit(fruitName){
       let fruits = this.state.fruitData;
       fruits.push(fruitName);
+      fruits.sort();
       this.setState({fruitData: fruits});
    }
 
    render(){
       return (<div>
          <h1>Listes des fruits </h1>
-         <FruitForm />
+         <FruitForm addItem={this.addFruit}/>
          <FruitList 
             list={this.state.fruitData} 
             removeItem={this.deleteFruit}
