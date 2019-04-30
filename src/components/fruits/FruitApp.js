@@ -25,7 +25,7 @@ class FruitApp extends React.Component {
    }
 
    getData(){
-      if(this.state.fruitData.length == 0){
+      if(!this.state.fruitData.length){
         return [];
       } else {
          return this.state.fruitData;
